@@ -1,3 +1,116 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
 
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+header .text-container, header .img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-family: "Castoro", serif;
+  background-color: #FAF9E0;
+}
+
+h1 {
+  font-size: 48px;
+  color: #3B3A34;
+}
+
+header {
+  display: flex;
+  min-height: 100vh;
+}
+header .img-container {
+  width: 50%;
+  text-align: left;
+}
+header .img-container img {
+  width: 20vw;
+}
+header .text-container {
+  flex-direction: column;
+}
+header .text-container .content {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+header .text-container .content h1 {
+  text-align: left;
+}
+header .text-container .content p {
+  font-size: 24px;
+  color: #4B4B46;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  margin-top: 18px;
+  text-align: left;
+}
+header .text-container .content .cta {
+  text-decoration: none;
+  color: #FAF9E0;
+  background-color: #626056;
+  padding: 15px 20px;
+  border-radius: 12px;
+}
+
+@media screen and (max-width: 780px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  header .img-container img {
+    width: 30vw;
+  }
+  header .text-container {
+    margin-top: 30px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
