@@ -1,0 +1,16 @@
+{
+  "name": "inksect_landing_page",
+  "version": "1.0.0",
+  "description": "Web Landing page for Inksect Tattoo Studio",
+  "main": "index.html",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
+  },
+  "author": "Yeison Stiven Builes Uribe",
+  "license": "ISC"
+}
