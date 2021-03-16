@@ -45,7 +45,7 @@ input {
   border-radius: 0;
 }
 
-header .text-container, header .img-container {
+#portfolio .modal .content, #portfolio .modal, header .text-container, header .img-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -128,8 +128,8 @@ header .text-container .content .cta:active {
   margin: 50px auto;
 }
 #portfolio .gallery {
+  background-color: #ECEBD3;
   min-height: 55vh;
-  border: 1px solid black;
   width: 62vw;
   margin-bottom: 40px;
   display: flex;
@@ -142,6 +142,9 @@ header .text-container .content .cta:active {
 #portfolio .gallery .card img {
   width: 200px;
   height: 200px;
+}
+#portfolio .gallery .card img:hover {
+  cursor: pointer;
 }
 #portfolio .ctas .contactCta {
   text-decoration: none;
@@ -167,6 +170,30 @@ header .text-container .content .cta:active {
   transition: background-color 0.4s;
   text-align: center;
 }
+#portfolio .modal {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+#portfolio .modal .bx {
+  color: #FAF9E0;
+  font-size: 48px;
+  margin: auto 15px;
+}
+#portfolio .modal .bx:hover {
+  cursor: pointer;
+}
+#portfolio .modal .bx-x {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+#portfolio .modal .content img {
+  height: 550px;
+  max-width: 70vw;
+}
 
 @media screen and (max-width: 780px) {
   #portfolio h1 {
@@ -183,6 +210,10 @@ header .text-container .content .cta:active {
   #portfolio .ctas a {
     margin: 10px;
     text-align: center;
+  }
+  #portfolio .modal .content img {
+    height: auto;
+    max-width: 60vw;
   }
 }
 * {
