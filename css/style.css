@@ -71,6 +71,10 @@ header .img-container {
 }
 header .img-container img {
   width: 20vw;
+  transition: 0.8s;
+}
+header .img-container img:hover {
+  width: 25vw;
 }
 header .text-container {
   flex-direction: column;
@@ -97,6 +101,13 @@ header .text-container .content .cta {
   background-color: #626056;
   padding: 15px 20px;
   border-radius: 12px;
+  transition: background-color 0.4s;
+}
+header .text-container .content .cta:hover {
+  background-color: #3B3A34;
+}
+header .text-container .content .cta:active {
+  background-color: #161614;
 }
 
 @media screen and (max-width: 780px) {
@@ -106,6 +117,9 @@ header .text-container .content .cta {
     align-items: center;
   }
   header .img-container img {
+    width: 30vw;
+  }
+  header .img-container img:hover {
     width: 30vw;
   }
   header .text-container {

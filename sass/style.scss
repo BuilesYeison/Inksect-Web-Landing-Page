@@ -28,13 +28,11 @@ $f-size-main-title:48px;
 $f-size-paragraph:24px;
 $f-size-card-title:36px;
 $f-size-footer:20px;
-
 %center-flex-container{
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 body{font-family: $font-stack; background-color: $back-color;}
 h1{font-size: $f-size-main-title; color: $title-color;}
 
@@ -45,8 +43,8 @@ header{
         width: 50%;
         @extend %center-flex-container;
         text-align: left;
-
-        img{width: 20vw;}
+        img{width: 20vw; transition: 0.8s}
+        img:hover{width: 25vw; }
         
     }
     .text-container{
@@ -70,7 +68,10 @@ header{
                 background-color: $main-cta-color;
                 padding: 15px 20px;
                 border-radius: 12px;
+                transition: background-color 0.4s;
             }
+            .cta:hover{background-color: $title-color;}
+            .cta:active{background-color: #161614;}
         }
         
     }
@@ -82,7 +83,7 @@ header{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        .img-container{img{width: 30vw;}}
+        .img-container{img{width: 30vw;}img:hover{width: 30vw;}}
         .text-container{margin-top: 30px;}
     }
 }
