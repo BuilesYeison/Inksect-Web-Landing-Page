@@ -1,0 +1,27 @@
+$font-stack:'Castoro', serif;
+$paragraph-color:#4B4B46;
+$title-color:#3B3A34;
+$main-cta-color:#626056;
+$back-color:#FAF9E0;
+$card-color:#ECEBD3;
+$team-cta-back-color:rgba(98,96,86,0.3);
+$cta-active-color: #161614;
+$f-size-main-title:48px;
+$f-size-paragraph:24px;
+$f-size-card-title:36px;
+$f-size-footer:20px;
+%center-flex-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin cta($textColor, $backColor) {
+    text-decoration: none;
+    padding: 15px 20px;
+    border-radius: 12px;
+    background-color: $backColor;
+    color: $textColor;
+    transition: background-color 0.4s;
+    text-align: center;
+}

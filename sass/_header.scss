@@ -1,0 +1,45 @@
+header{
+    display: flex;
+    min-height: 100vh;
+    .img-container{
+        width: 50%;
+        @extend %center-flex-container;
+        text-align: left;
+        img{width: 20vw; transition: 0.8s}
+        img:hover{width: 25vw; }
+        
+    }
+    .text-container{
+        @extend %center-flex-container;
+        flex-direction: column;
+        .content{
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            h1{text-align: left;}
+            p{
+                font-size: $f-size-paragraph;
+                color: $paragraph-color;
+                line-height: 1.5;
+                margin-bottom: 40px;
+                margin-top: 18px;
+                text-align:left ;                
+            }
+            .cta{
+                @include cta($back-color,$main-cta-color);
+            }
+            .cta:hover{background-color: $title-color;}
+            .cta:active{background-color: $cta-active-color;}
+        }  
+    }  
+}
+
+@media screen and (max-width:780px){
+    header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .img-container{img{width: 30vw;}img:hover{width: 30vw;}}
+        .text-container{margin-top: 30px;}
+    }
+}
