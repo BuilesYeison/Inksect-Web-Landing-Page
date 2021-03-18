@@ -27,6 +27,7 @@
         .teamCta{@include cta($paragraph-color,$team-cta-back-color)}
     }
     .modal{
+        display: none;
         position: fixed;
         width: 100vw;
         height: 100vh;

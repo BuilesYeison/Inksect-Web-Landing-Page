@@ -171,6 +171,7 @@ header .text-container .content .cta:active {
   text-align: center;
 }
 #portfolio .modal {
+  display: none;
   position: fixed;
   width: 100vw;
   height: 100vh;
