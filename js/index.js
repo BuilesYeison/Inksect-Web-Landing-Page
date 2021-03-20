@@ -12,6 +12,7 @@ backImage.addEventListener('click',(evt)=> switchImage(-1));
 closeModal.addEventListener('click', closeModalFunc);
 galleryImgs.forEach((images) => {
     images.addEventListener('click', (event) => {
+        //modal.classList.toggle("opacity")
         modal.style.display = "inherit"; //display modal
         let srcImage = event.target.src
         imgModal.src = srcImage

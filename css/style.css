@@ -142,9 +142,11 @@ header .text-container .content .cta:active {
 #portfolio .gallery .card img {
   width: 200px;
   height: 200px;
+  transition: 0.5s;
 }
 #portfolio .gallery .card img:hover {
   cursor: pointer;
+  transform: scale(1.2);
 }
 #portfolio .ctas .contactCta {
   text-decoration: none;
@@ -191,6 +193,14 @@ header .text-container .content .cta:active {
   top: 10px;
   right: 20px;
 }
+#portfolio .modal .content .bx-left-arrow-alt {
+  position: absolute;
+  left: 10vw;
+}
+#portfolio .modal .content .bx-right-arrow-alt {
+  position: absolute;
+  right: 10vw;
+}
 #portfolio .modal .content img {
   height: 550px;
   max-width: 70vw;
@@ -215,6 +225,18 @@ header .text-container .content .cta:active {
   #portfolio .modal .content img {
     height: auto;
     max-width: 60vw;
+  }
+}
+@media screen and (max-width: 550px) {
+  #portfolio .content .bx-left-arrow-alt {
+    position: absolute;
+    left: 10vw;
+    bottom: 80px;
+  }
+  #portfolio .content .bx-right-arrow-alt {
+    position: absolute;
+    right: 10vw;
+    bottom: 80px;
   }
 }
 * {

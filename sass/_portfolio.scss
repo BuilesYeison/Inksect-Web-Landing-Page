@@ -1,12 +1,16 @@
-#portfolio{
-    
+#portfolio {
+
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
     justify-content: flex-start;
-    h1{margin: 50px auto;}
-    .gallery{
+
+    h1 {
+        margin: 50px auto;
+    }
+
+    .gallery {
         background-color: $card-color;
         min-height: 55vh;
         width: 62vw;
@@ -14,64 +18,134 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        .card{
+
+        .card {
             padding: 5px;
-            img{width: 200px; height: 200px;}
-            img:hover{cursor: pointer;}
+
+            img {
+                width: 200px;
+                height: 200px;
+                transition: 0.5s;
+            }
+
+            img:hover {
+                cursor: pointer;
+                transform: scale(1.2);
+            }
         }
     }
-    .ctas{
-        .contactCta{@include cta($back-color,$main-cta-color)}
-        .contactCta:hover{background-color: $title-color;}
-        .contactCta:active{background-color: $cta-active-color;}
-        .teamCta{@include cta($paragraph-color,$team-cta-back-color)}
+
+    .ctas {
+        .contactCta {
+            @include cta($back-color, $main-cta-color)
+        }
+
+        .contactCta:hover {
+            background-color: $title-color;
+        }
+
+        .contactCta:active {
+            background-color: $cta-active-color;
+        }
+
+        .teamCta {
+            @include cta($paragraph-color, $team-cta-back-color)
+        }
     }
-    .modal{
+
+    .modal {
         display: none;
         position: fixed;
         width: 100vw;
         height: 100vh;
         top: 0;
-        background-color: rgba(0,0,0,0.8);
+        background-color: rgba(0, 0, 0, 0.8);
         @extend %center-flex-container;
 
-        .bx{
+        .bx {
             color: $back-color;
             font-size: $f-size-main-title;
             margin: auto 15px;
         }
-        .bx:hover{cursor: pointer;}
-        .bx-x{
+
+        .bx:hover {
+            cursor: pointer;
+        }
+
+        .bx-x {
             position: absolute;
             top: 10px;
             right: 20px;
         }
-        .content{
+
+        .content {
             @extend %center-flex-container;
-            img{
+
+            .bx-left-arrow-alt {
+                position: absolute;
+                left: 10vw;
+            }
+
+            .bx-right-arrow-alt {
+                position: absolute;
+                right: 10vw;
+            }
+
+            img {
                 height: 550px;
                 max-width: 70vw;
             }
         }
     }
 }
-@media screen and (max-width:780px){
-    #portfolio{
-        h1{ margin: 30px; text-align: center;}
-        .gallery{
+
+@media screen and (max-width:780px) {
+    #portfolio {
+        h1 {
+            margin: 30px;
+            text-align: center;
+        }
+
+        .gallery {
             margin-bottom: 0px;
         }
-        .ctas{
-            display: flex; flex-direction: column;
-            a{margin: 10px; text-align: center;}
+
+        .ctas {
+            display: flex;
+            flex-direction: column;
+
+            a {
+                margin: 10px;
+                text-align: center;
+            }
         }
-        .modal{
-            .content{
+
+        .modal {
+            .content {
                 @extend %center-flex-container;
-                img{
+
+                img {
                     height: auto;
                     max-width: 60vw;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:550px) {
+    #portfolio {
+        .content {
+            .bx-left-arrow-alt {
+                position: absolute;
+                left: 10vw;
+                bottom: 80px;
+            }
+
+            .bx-right-arrow-alt {
+                position: absolute;
+                right: 10vw;
+                bottom: 80px;
             }
         }
     }
