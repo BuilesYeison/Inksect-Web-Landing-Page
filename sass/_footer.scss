@@ -1,0 +1,15 @@
+footer{
+    text-align: center;
+    @extend %center-flex-container;
+    background-color: $title-color;
+    min-height: 15vh;
+    max-width: 100vw;
+    p{
+        color: $back-color;
+        line-height: 1.5;
+        a{
+            color: $back-color;
+            font-weight: bold;
+        }
+    }
+}
