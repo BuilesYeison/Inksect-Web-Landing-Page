@@ -1,6 +1,7 @@
 header{
     display: flex;
     min-height: 100vh;
+    max-width: 100vw;
     .img-container{
         width: 50%;
         @extend %center-flex-container;
