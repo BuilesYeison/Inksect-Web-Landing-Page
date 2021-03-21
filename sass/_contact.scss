@@ -1,0 +1,146 @@
+#contact {
+    @extend %center-flex-container;
+    min-height: 100vh;
+    flex-wrap: wrap;
+
+    .form {
+        width: 45%;
+        min-height: 60vh;
+        padding: 45px 20px;
+
+        p {
+            margin-top: 8px;
+            font-size: 18px;
+            color: $paragraph-color;
+            line-height: 1.5;
+        }
+
+        .form-group {
+            position: relative;
+            margin: auto;
+            margin-top: 20px;
+            padding: 15px 0 0;
+
+            .form_field {
+                width: 100%;
+                border: 0;
+                border-bottom: 2px solid $title-color;
+                outline: 0;
+                font-size: 1.2rem;
+                color: $title-color;
+                padding: 7px 0;
+                background-color: transparent;
+                transition: border-color 0.2s;
+
+                &::placeholder {
+                    color: transparent;
+                }
+
+                &:placeholder-shown~.form__label {
+                    font-size: 1.2rem;
+                    cursor: text;
+                    top: 20px;
+                }
+            }
+
+            .form__label {
+                position: absolute;
+                top: 0;
+                display: block;
+                transition: 0.2s;
+                font-size: 1rem;
+                color: $paragraph-color;
+            }
+
+            .form__field:focus {
+                ~.form__label {
+                    position: absolute;
+                    top: 0;
+                    display: block;
+                    transition: 0.2s;
+                    font-size: 1rem;
+                    color: $paragraph-color;
+                    font-weight: 700;
+                }
+
+                padding-bottom: 6px;
+                font-weight: 700;
+                border-width: 3px;
+                //border-image: linear-gradient(to right, $primary,$secondary);
+                //border-image-slice: 1;
+            }
+
+            /* reset input */
+            .form__field {
+
+                &:required,
+                &:invalid {
+                    box-shadow: none;
+                }
+            }
+        }
+
+        .correo {
+            margin-bottom: 50px;
+        }
+
+        .cta {
+            @include cta($back-color, $main-cta-color)
+        }
+
+        .cta:hover {
+            cursor: pointer;
+            background-color: $title-color;
+        }
+
+        .cta:active {
+            background-color: $cta-active-color;
+        }
+
+        .social-media {
+            width: 50%;
+            margin: auto;
+            text-align: center;
+            margin-top: 50px;
+            @extend %center-flex-container;
+            justify-content: space-around;
+            i{
+                font-size: 36px;
+                color: $title-color;
+                transition: 0.2s;
+            }
+            i:hover{
+                transform: scale(1.2);
+            }
+        }
+
+
+    }
+
+    .ubication {
+        padding: 45px 20px;
+        width: 45%;
+        //border: 1px solid black;
+
+        p{margin-bottom: 15px; font-size: 18px; color:$paragraph-color;}
+
+        #map {
+            width: 100%;
+            min-height: 400px;
+        }
+    }
+}
+
+@media screen and (max-width:780px) {
+    #contact {
+        flex-direction: column;
+
+        .form {
+            width: 90%;
+        }
+
+        .ubication {
+            width: 90%;
+        }
+    }
+}
