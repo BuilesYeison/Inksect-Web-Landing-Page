@@ -3,6 +3,7 @@
 @import "header";
 @import "portfolio";
 @import "team";
+@import "contact";
 *{scroll-behavior: smooth;}
 body{font-family: $font-stack; background-color: $back-color; }
 h1{font-size: $f-size-main-title; color: $title-color;}
