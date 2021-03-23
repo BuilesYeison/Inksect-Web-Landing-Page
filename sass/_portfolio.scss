@@ -108,6 +108,13 @@
 
         .gallery {
             margin-bottom: 0px;
+            width: 80vw;
+            .card{
+                img{
+                    width: 250px;
+                    height: 250px;
+                }
+            }
         }
 
         .ctas {

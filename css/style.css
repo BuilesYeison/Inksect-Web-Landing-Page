@@ -214,6 +214,11 @@ header .text-container .content .cta:active {
   }
   #portfolio .gallery {
     margin-bottom: 0px;
+    width: 80vw;
+  }
+  #portfolio .gallery .card img {
+    width: 250px;
+    height: 250px;
   }
   #portfolio .ctas {
     display: flex;
